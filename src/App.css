@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+.App{
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.containerProduct{
+    display: grid;
+    width: 55%;
+    border-radius: 15px;
+    height: 55vh;
+    background-color: hsl(0, 0%, 100%);
+    margin: auto;
+    grid-template-columns: 50% 50%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ImageProduct {
+    background-image: url('./assets/image-product-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px 0 0 15px;
+    grid-column: 1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textProduct{
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-
-.App-link {
-  color: #61dafb;
+.textPerfume{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    color: hsl(228, 12%, 48%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleNameProduct{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+.descritionProduct{
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+}
+.prices{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+.pricePrincipal{
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+}
+.priceAntigo{
+    font-size: 13px;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    text-align: center;
+}
+.addToCart{
+    margin-top: 15px;
+    height: 6vh;
+    width: 90%;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    background-image: url('./assets/icon-cart.svg');
+    background-repeat: no-repeat;
+    background-position: 35px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width: 992px) {
+    .containerProduct{
+        display: grid;
+        width: 80%;
+        border-radius: 15px;
+        height: 70vh;
+        background-color: hsl(0, 0%, 100%);
+        margin: auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+    }
+    .ImageProduct {
+        border-radius: 15px 15px 0 0;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .pricePrincipal {
+        font-size: 20px;
+    }
 }
